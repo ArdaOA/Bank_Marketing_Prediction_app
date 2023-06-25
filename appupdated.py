@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-model = joblib.load('bank_marketing.joblib')
+model = joblib.load("bank_marketing.joblib")
 
 st.title(':bank: Bank Marketing Prediction App')
 st.write('Please input the data for prediction:')
