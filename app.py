@@ -1,8 +1,10 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
+from xgboost import XGBClassifier
 import joblib
 
-model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing.joblib')
+model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing')
 
 def predict(model, input_df):
     predictions_df = model.predict(input_df)
@@ -24,7 +26,6 @@ def main():
     contact = st.selectbox('Select Contact Communication Type', options=["cellular", "telephone"])
     month = st.selectbox('Select Last Contact Month', options=["may", "jun", "nov", "sep", "jul", "aug", "mar", "oct", "apr", "dec"])
     day_of_week = st.selectbox('Select Last Contact Day of the Week', options=["mon", "tue", "wed", "thu", "fri"])
-    duration = st.number_input('Enter Last Contact Duration', min_value=0, step=1)
     campaign = st.number_input('Enter Number of Contacts Performed', min_value=0, step=1)
     emp_var_rate = st.number_input('Enter Employment Variation Rate')
     cons_price_idx = st.number_input('Enter Consumer Price Index')
@@ -43,7 +44,6 @@ def main():
         'contact': contact,
         'month': month,
         'day_of_week': day_of_week,
-        'duration': duration,
         'campaign': campaign,
         'emp.var.rate': emp_var_rate,
         'cons.price.idx': cons_price_idx,
