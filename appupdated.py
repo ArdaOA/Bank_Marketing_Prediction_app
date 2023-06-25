@@ -33,6 +33,7 @@ def predict():
         marital1=0
     else:
         marital1=3
+        
     if job=='admin':
         job1=0
     elif job=='bluecollar':
@@ -55,6 +56,7 @@ def predict():
         job1= 3     
     else:
         job1=1
+        
     if education=='universitydegree':
         education1=6
     elif education=='highschool':
@@ -69,22 +71,27 @@ def predict():
         education1=1
     else:
         education1=4
+        
     if contact=='telephone':
         contact1=1
     else:
         contact1=0
+        
     if housing =='yes':
         housing1=0
     else:
         housing1=1
+        
     if default=='yes':
         default1=1
     else:
         default1=0
+        
     if loan=='yes':
         loan1=1
     else:
         loan1=0
+        
     if month=='may':
         month1=6
     elif month=='jul':
@@ -105,6 +112,7 @@ def predict():
         month1=9
     else:
         month1=2
+        
     if day_of_week=='thu':
         day_of_week1=2
     elif day_of_week=='mon':
