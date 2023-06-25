@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+from xgboost import XGBClassifier
 
 model = pickle.load(open('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing_predictor.pkl', 'wb'))
 
