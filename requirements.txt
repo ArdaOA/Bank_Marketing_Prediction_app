@@ -1,4 +1,3 @@
-scikitlearn
 joblib
 numpy
 pandas
