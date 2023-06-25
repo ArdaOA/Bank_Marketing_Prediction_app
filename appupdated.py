@@ -5,7 +5,7 @@ import joblib
 
 model = joblib.load("bank_marketing.joblib")
 
-st.title(':bank: Bank Marketing Prediction App')
+st.title('Bank Marketing Prediction App')
 st.write('Please input the data for prediction:')
 age = st.number_input('Age', min_value=0, max_value=100, step=1)
 job = st.selectbox('Select Job', options=["blue-collar", "services", "admin.", "entrepreneur", "self-employed", "technician", "management", "student", "retired", "housemaid", "unemployed"])
