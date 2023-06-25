@@ -13,9 +13,8 @@ def predict(model, input_df):
 
 def main():
 
-    st.title(':money: Term Deposit Prediction App')
+    st.title(':bank: Term Deposit Prediction App')
     st.write('Please input the data for prediction:')
-    background-image: url("https://cdn.mozo.com.au/redactor/pictures/9885/short-or-long-term-deposit_original.png?width=1428")
     age = st.number_input('Age', min_value=0, max_value=100, step=1)
     job = st.selectbox('Select Job', options=["blue-collar", "services", "admin.", "entrepreneur", "self-employed", "technician", "management", "student", "retired", "housemaid", "unemployed"])
     marital = st.selectbox('Select Marital Status', options=["married", "single", "divorced"])
