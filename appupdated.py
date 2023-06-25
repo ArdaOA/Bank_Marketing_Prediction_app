@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from xgboost import XGBClassifier
 import joblib
 
 model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing.joblib')
