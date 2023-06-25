@@ -33,8 +33,7 @@ def predict():
         marital1=0
     else:
         marital1=3
-       
-       
+        
     if job=='admin':
         job1=0
     elif job=='bluecollar':
@@ -113,8 +112,7 @@ def predict():
         month1=9
     else:
         month1=2
-
-
+        
     if day_of_week=='thu':
         day_of_week1=2
     elif day_of_week=='mon':
@@ -125,8 +123,7 @@ def predict():
         day_of_week1=0
     else:
         day_of_week1=4
-
-
+        
     cols = pd.DataFrame([{'age':age, 'job':job1, 'marital':marital1,'education':education1,'default':default,'housing':housing, 'loan':loan, 'contact':contact1,
                           'month': month1,  'day_of_week': day_of_week1, 'campaign': campaign,
                           'emp_var_rate':emp_var_rate, 'cons_price_idx':cons_price_idx, 'cons_conf_idx':cons_conf_idx,'euribor3m': euribor3m,'nr_employed':nr_employed}], index=[0])
