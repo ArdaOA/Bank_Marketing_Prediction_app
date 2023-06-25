@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-conda install -c conda-forge xgboost
-from xgboost import XGBClassifier
 
 model = pickle.load(open('bank_marketing_predictor.pkl', 'rb'))
 
