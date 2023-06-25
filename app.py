@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-pip install joblib
 import pickle
 import joblib
 
-model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing.joblib')
+model = joblib.load('bank_marketing.joblib')
 
 def predict(model, input_df):
     predictions_df = model.predict(input_df)
