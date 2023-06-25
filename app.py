@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBClassifier
 
-model = pickle.load(open('best_model.pkl', 'rb'))
+model = pickle.load(open('bank_marketing_predictor.pkl', 'rb'))
 
 def predict(model, input_df):
     predictions_df = model.predict(input_df)
@@ -28,9 +28,6 @@ def main():
     day_of_week = st.selectbox('Select Last Contact Day of the Week', options=["mon", "tue", "wed", "thu", "fri"])
     duration = st.number_input('Enter Last Contact Duration', min_value=0, step=1)
     campaign = st.number_input('Enter Number of Contacts Performed', min_value=0, step=1)
-    pdays = st.number_input('Enter Number of Days Passed After Last Contact', min_value=0, step=1)
-    previous = st.number_input('Enter Number of Contacts Performed Before this Campaign', min_value=0, step=1)
-    poutcome = st.selectbox('Select Outcome of Previous Marketing Campaign', options=["nonexistent", "failure", "success"])
     emp_var_rate = st.number_input('Enter Employment Variation Rate')
     cons_price_idx = st.number_input('Enter Consumer Price Index')
     cons_conf_idx = st.number_input('Enter Consumer Confidence Index')
@@ -50,9 +47,6 @@ def main():
         'day_of_week': day_of_week,
         'duration': duration,
         'campaign': campaign,
-        'pdays': pdays,
-        'previous': previous,
-        'poutcome': poutcome,
         'emp.var.rate': emp_var_rate,
         'cons.price.idx': cons_price_idx,
         'cons.conf.idx': cons_conf_idx,
