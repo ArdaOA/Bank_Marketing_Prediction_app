@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 import joblib
 
-model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing')
+model = joblib.load('/Users/ardaorkunaydin/Desktop/TEDU/ADS-542/bank_marketing.joblib')
 
 def predict(model, input_df):
     predictions_df = model.predict(input_df)
