@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-model = pickle.load(open('bank_marketing_predictor.pkl', 'wb'))
+model = pickle.load(open('bank_marketing_predictor.sav', 'wb'))
 
 def predict(model, input_df):
     predictions_df = model.predict(input_df)
